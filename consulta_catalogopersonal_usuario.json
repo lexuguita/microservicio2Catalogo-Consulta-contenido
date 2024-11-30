@@ -1,0 +1,61 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Consulta de Contenido por Usuario",
+    "description": "Proporciona una lista personalizada de contenido recomendada para un usuario.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:9002"
+    }
+  ],
+  "paths": {
+    "/catalogo/{usuarioId}": {
+      "get": {
+        "summary": "Consulta de contenido por usuario",
+        "description": "Proporciona una lista personalizada de contenido recomendada para el usuario.",
+        "parameters": [
+          {
+            "name": "usuarioId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Identificador único del usuario."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista personalizada de contenido.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "titulo": {
+                        "type": "string"
+                      },
+                      "categoria": {
+                        "type": "string"
+                      },
+                      "genero": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
