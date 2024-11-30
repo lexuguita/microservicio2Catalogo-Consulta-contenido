@@ -1,2 +1,1 @@
-# microservicio2Catlogo--Consulta-contenido
-Proporciona una lista personalizada de contenido recomendada para el usuario, basada en sus preferencias y consumo previo.
+Ofrece al usuario una serie de recomendaciones, que usan su registro de visualización de películas para hacer dichas recomendaciones, para ello se basa en el genero de la película, puntuación de la película, entre otros.Ofrece al usuario una serie de recomendaciones, que usan su registro de visualización de películas para hacer dichas recomendaciones, para ello se basa en el genero de la película, puntuación de la película, entre otros.
